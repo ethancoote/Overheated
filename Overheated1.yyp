@@ -45,6 +45,7 @@
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
     {"id":{"name":"oControl","path":"objects/oControl/oControl.yy",},},
     {"id":{"name":"oEnemyLava","path":"objects/oEnemyLava/oEnemyLava.yy",},},
+    {"id":{"name":"oEnemyLavaStill","path":"objects/oEnemyLavaStill/oEnemyLavaStill.yy",},},
     {"id":{"name":"oHealthBar","path":"objects/oHealthBar/oHealthBar.yy",},},
     {"id":{"name":"oHeat","path":"objects/oHeat/oHeat.yy",},},
     {"id":{"name":"oHitbox","path":"objects/oHitbox/oHitbox.yy",},},

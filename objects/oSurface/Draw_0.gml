@@ -37,6 +37,14 @@ if surface_exists(surface) {
 		draw_sprite_ext(sLightSource, image_index, x - _cx, y - _cy - 12, 0.7 + random(0.1), 0.7 + random(0.1), 0, c_orange, 0.5);
 	}
 	
+	with (oEnemyLavaStill) {
+		gpu_set_blendmode(bm_subtract);
+		draw_sprite_ext(sLightSource, image_index, x - _cx, y - _cy - 12, 0.7 + random(0.1), 0.7 + random(0.1), 0, c_white, 1);
+		gpu_set_blendmode(bm_normal);
+		gpu_set_blendmode(bm_add);
+		draw_sprite_ext(sLightSource, image_index, x - _cx, y - _cy - 12, 0.7 + random(0.1), 0.7 + random(0.1), 0, c_orange, 0.5);
+	}
+	
 	with (oPlayer) {
 		if hitpause > 0 {
 			gpu_set_blendmode(bm_normal);
