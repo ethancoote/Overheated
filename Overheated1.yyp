@@ -41,6 +41,7 @@
   "name":"Overheated1",
   "resources":[
     {"id":{"name":"fnTimer","path":"fonts/fnTimer/fnTimer.yy",},},
+    {"id":{"name":"oBackgroundRocks","path":"objects/oBackgroundRocks/oBackgroundRocks.yy",},},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
     {"id":{"name":"oControl","path":"objects/oControl/oControl.yy",},},
     {"id":{"name":"oEnemyLava","path":"objects/oEnemyLava/oEnemyLava.yy",},},
@@ -58,6 +59,7 @@
     {"id":{"name":"oWin","path":"objects/oWin/oWin.yy",},},
     {"id":{"name":"psHeatMeter","path":"particles/psHeatMeter/psHeatMeter.yy",},},
     {"id":{"name":"AttackCancelRoom","path":"rooms/AttackCancelRoom/AttackCancelRoom.yy",},},
+    {"id":{"name":"JumpRoom","path":"rooms/JumpRoom/JumpRoom.yy",},},
     {"id":{"name":"MenuRoom","path":"rooms/MenuRoom/MenuRoom.yy",},},
     {"id":{"name":"controls","path":"scripts/controls/controls.yy",},},
     {"id":{"name":"sBackground","path":"sprites/sBackground/sBackground.yy",},},
@@ -100,6 +102,7 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"MenuRoom","path":"rooms/MenuRoom/MenuRoom.yy",},},
+    {"roomId":{"name":"JumpRoom","path":"rooms/JumpRoom/JumpRoom.yy",},},
     {"roomId":{"name":"AttackCancelRoom","path":"rooms/AttackCancelRoom/AttackCancelRoom.yy",},},
   ],
   "templateType":"game",

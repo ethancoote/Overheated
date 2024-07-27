@@ -19,6 +19,7 @@
     {"name":"inst_21A0F280","path":"rooms/AttackCancelRoom/AttackCancelRoom.yy",},
     {"name":"inst_373FC43","path":"rooms/AttackCancelRoom/AttackCancelRoom.yy",},
     {"name":"inst_45D87B43","path":"rooms/AttackCancelRoom/AttackCancelRoom.yy",},
+    {"name":"inst_413ABE43","path":"rooms/AttackCancelRoom/AttackCancelRoom.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -67,10 +68,9 @@
         {"$GMRInstance":"v1","%Name":"inst_373FC43","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_373FC43","objectId":{"name":"oEnemyLava","path":"objects/oEnemyLava/oEnemyLava.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":528.0,"y":368.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"light","animationFPS":15.0,"animationSpeedType":0,"colour":318767103,"depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"light","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
-    {"$GMRBackgroundLayer":"","%Name":"Backgrounds_2","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":600,"effectEnabled":true,"effectType":"_filter_large_blur","gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Backgrounds_2","properties":[
-        {"name":"g_Radius","type":0,"value":"1",},
-        {"name":"g_NoiseTexture","type":2,"value":"_filter_large_blur_noise",},
-      ],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"sBackground2","path":"sprites/sBackground2/sBackground2.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":352,},
+    {"$GMRInstanceLayer":"","%Name":"rocks","depth":600,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"$GMRInstance":"v1","%Name":"inst_413ABE43","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_413ABE43","objectId":{"name":"oBackgroundRocks","path":"objects/oBackgroundRocks/oBackgroundRocks.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":11.5,"scaleY":1.0,"x":128.0,"y":352.0,},
+      ],"layers":[],"name":"rocks","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Backgrounds_3","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":700,"effectEnabled":true,"effectType":"_filter_large_blur","gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Backgrounds_3","properties":[
         {"name":"g_Radius","type":0,"value":"1",},
         {"name":"g_NoiseTexture","type":2,"value":"_filter_large_blur_noise",},
