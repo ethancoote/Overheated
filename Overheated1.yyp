@@ -75,6 +75,8 @@
     {"id":{"name":"sLose","path":"sprites/sLose/sLose.yy",},},
     {"id":{"name":"sPlay","path":"sprites/sPlay/sPlay.yy",},},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},},
+    {"id":{"name":"sPlayerFall","path":"sprites/sPlayerFall/sPlayerFall.yy",},},
+    {"id":{"name":"sPlayerJump","path":"sprites/sPlayerJump/sPlayerJump.yy",},},
     {"id":{"name":"sPlayerRun","path":"sprites/sPlayerRun/sPlayerRun.yy",},},
     {"id":{"name":"sPlayHover","path":"sprites/sPlayHover/sPlayHover.yy",},},
     {"id":{"name":"sSpawn","path":"sprites/sSpawn/sSpawn.yy",},},

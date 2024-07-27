@@ -6,6 +6,12 @@ if x_spd != 0 {
 	sprite_index = sPlayer;
 }
 
+if y_spd < 0 {
+	sprite_index = sPlayerJump;
+} else if y_spd > 0 {
+	sprite_index = sPlayerFall;
+}
+
 if x_spd > 6 {
 	image_speed = 1.5;
 } else {
