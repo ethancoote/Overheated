@@ -1,20 +1,21 @@
 // stats
-spd = 4;
-air_spd = 4;
-grav = 0.7;
+spd = 3;
+air_spd = 3;
+grav = 0.5;
 term_vel = 7;
 accel = 0.5;
 jump_buffer = 7;
 jumps = 1;
 jump_frames = 4;
 jump_hold_frames = 8;
-jump_power = 6;
+jump_power = 4;
 coyote_frames = 3;
 walls = oWall;
 wall_slide_spd = 0.5;
 heat_scale = 1;
 heat_frames = 30;
 hp = 100;
+hurt_frames = 10;
 
 // vars
 x_spd = 0;
@@ -37,3 +38,9 @@ last_y = 0;
 heat = 0;
 heat_timer = 0;
 heat_extra = 0;
+hurt_timer = 0;
+
+// spawn location
+spawn = [oSpawn.x, oSpawn.y];
+x = spawn[0];
+y = spawn[1];

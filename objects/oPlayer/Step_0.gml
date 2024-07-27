@@ -25,12 +25,13 @@ if x_spd == spd || x_spd == -spd {
 if heat == 5 {
 	heat_extra = 0.5;
 } else if heat == 6 {
-	heat_extra = 1.5;
+	heat_extra = 1;
 } else {
 	heat_extra = 0;
 }
+
 // speed
-spd = 4 + (heat/2) + heat_extra;
+spd = 3 + (heat/3) + heat_extra;
 air_spd = spd;
 
 // saving poisition for point direction
@@ -125,13 +126,21 @@ if y_spd > term_vel {
 }
 
 // got hit
-if place_meeting(x, y, oLose) {
+if place_meeting(x, y, oLose) && hurt_timer == 0{
+	hurt_timer = hurt_frames;
 	hp -= 100;
+}
+
+if hurt_timer > 0 {
+	hurt_timer--;
+	x_spd = 0;
+	y_spd = 0;
 }
 
 // win
 if place_meeting(x, y, oWin) {
 	oControl.win = true;
+	room_goto(0);
 }
 
 // y collision
@@ -172,6 +181,10 @@ if place_meeting(x + x_spd, y, walls) {
 x += x_spd;
 
 // death
-if hp <= 0 {
+if hp <= 0 && hurt_timer == 0{
 	oControl.lose = true;
+	hp = 100;
+	heat = 0;
+	x = spawn[0];
+	y = spawn[1];
 }
