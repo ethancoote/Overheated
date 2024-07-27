@@ -14,6 +14,7 @@ walls = oWall;
 wall_slide_spd = 0.5;
 heat_scale = 1;
 heat_frames = 30;
+hp = 100;
 
 // vars
 x_spd = 0;

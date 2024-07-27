@@ -124,6 +124,16 @@ if y_spd > term_vel {
 	y_spd = term_vel;
 }
 
+// got hit
+if place_meeting(x, y, oLose) {
+	hp -= 100;
+}
+
+// win
+if place_meeting(x, y, oWin) {
+	oControl.win = true;
+}
+
 // y collision
 var _sub_pixel = 0.5;
 if place_meeting(x, y + y_spd, walls) {
@@ -160,3 +170,8 @@ if place_meeting(x + x_spd, y, walls) {
 }
 
 x += x_spd;
+
+// death
+if hp <= 0 {
+	oControl.lose = true;
+}
