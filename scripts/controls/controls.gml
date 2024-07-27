@@ -27,6 +27,8 @@ function get_controls(_i){
 	attack_key = keyboard_check_pressed(ord("P"))
 	|| gamepad_button_check_pressed(_i, gp_face3);
 	
+	enter_key = keyboard_check_pressed(vk_enter);
+	
 }
 
 // getting gamepad
