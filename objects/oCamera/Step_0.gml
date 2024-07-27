@@ -37,9 +37,11 @@ if cam_x < ideal_pos[0] {
 camera_set_view_pos(view_camera[0], cam_x, cam_y);
 
 // background
-back_spd = oPlayer.x_spd *0.7;
+back_spd = oPlayer.x_spd *0.8;
 back_spd1 = oPlayer.x_spd * -1;
-back_spd2 = oPlayer.x_spd * 0.3;
+back_spd2 = oPlayer.x_spd * 0.2;
+back_spd3 = oPlayer.x_spd * 0.5;
 layer_hspeed(lay_id, back_spd);
 layer_hspeed(lay_id1, back_spd1);
 layer_hspeed(lay_id2, back_spd2);
+layer_hspeed(lay_id3, back_spd3);
