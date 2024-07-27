@@ -192,6 +192,12 @@ if hitpause > 0 {
 	attack_timer += 1;
 	if hitpause == 0 {
 		image_speed = 1;
+		x_spd = ideal_spd;
+		attack_timer = 0;
+		if !grounded {
+			y_spd = -6;
+		}
+		
 	}
 }
 

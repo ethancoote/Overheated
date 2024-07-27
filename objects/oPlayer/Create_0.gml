@@ -2,7 +2,7 @@
 spd = 3;
 air_spd = 3;
 grav = 0.5;
-term_vel = 7;
+term_vel = 6;
 accel = 0.5;
 jump_buffer = 7;
 jumps = 1;
