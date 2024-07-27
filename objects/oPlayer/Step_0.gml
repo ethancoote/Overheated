@@ -125,22 +125,78 @@ if y_spd > term_vel {
 	y_spd = term_vel;
 }
 
+// attack
+if attack_key && attack_timer == 0 && hurt_timer == 0{
+	attack_timer = attack_frames;
+	image_index = 0;
+}
+
+if attack_timer > 0 {
+	attack_timer--;
+	if attack_timer == 16 {
+		if face == 1 {
+			hitbox = instance_create_depth(x + 10 + x_spd, y, 0, oHitbox);
+		} else if face == -1 {
+			hitbox = instance_create_depth(x -30 + x_spd, y, 0, oHitbox);
+		}
+	}
+	if attack_timer == 8 {
+		instance_destroy(hitbox);
+		hitbox = noone;
+	}
+}
+
 // got hit
-if place_meeting(x, y, oLose) && hurt_timer == 0{
+if place_meeting(x, y, oLose) && hurt_timer == 0 {
 	hurt_timer = hurt_frames;
-	hp -= 100;
+	hp -= 50;
+}
+
+if place_meeting(x, y, oEnemyLava) && hurt_timer == 0 && attack_timer == 0 && safe_timer == 0{
+	hurt_timer = hurt_frames;
+	hp -= 30;
 }
 
 if hurt_timer > 0 {
+	heat = 0;
+	heat_timer = heat_frames;
+	draw_color = c_red;
 	hurt_timer--;
-	x_spd = 0;
-	y_spd = 0;
+	if hp > 0 {
+		x_spd = -3;
+		y_spd = -1;
+	} else {
+		x_spd = 0;
+		y_spd = 0;
+	}
+} else {
+	draw_color = c_white;
+}
+
+// heat damage
+if heat == 6 {
+	hp -= 0.20;
 }
 
 // win
 if place_meeting(x, y, oWin) {
 	oControl.win = true;
 	room_goto(0);
+}
+
+if hitpause > 0 {
+	hitpause--;
+	x_spd = 0;
+	y_spd = 0;
+	image_speed = 0;
+	attack_timer += 1;
+	if hitpause == 0 {
+		image_speed = 1;
+	}
+}
+
+if safe_timer > 0 {
+	safe_timer--;
 }
 
 // y collision
@@ -183,8 +239,7 @@ x += x_spd;
 // death
 if hp <= 0 && hurt_timer == 0{
 	oControl.lose = true;
-	hp = 100;
-	heat = 0;
-	x = spawn[0];
-	y = spawn[1];
+	room_restart();
 }
+
+

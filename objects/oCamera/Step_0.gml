@@ -30,9 +30,8 @@ if cam_x < ideal_pos[0] {
 	if abs(cam_x - ideal_pos[0]) > 20 {
 		cam_x = ideal_pos[0] + 20;
 	} 
-	
-	
 }
+
 
 camera_set_view_pos(view_camera[0], cam_x, cam_y);
 

@@ -1,19 +1,20 @@
-draw_sprite_ext(sprite_index, image_index, x, y, image_xscale*face, image_yscale, 0, c_white, 1);
-
-if x_spd != 0 {
+// changing player sprite
+if x_spd != 0 && attack_timer == 0{
 	sprite_index = sPlayerRun;
-} else {
+} 
+
+if attack_timer > 0 {
+	sprite_index = sPlayerSlash;
+} else if x_spd == 0{
 	sprite_index = sPlayer;
 }
 
-if y_spd < 0 {
+if y_spd < -0.5 && attack_timer == 0 {
 	sprite_index = sPlayerJump;
-} else if y_spd > 0 {
+} else if y_spd > 0.5 && attack_timer == 0 {
 	sprite_index = sPlayerFall;
 }
 
-if x_spd > 6 {
-	image_speed = 1.5;
-} else {
-	image_speed = 1;
-}
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale*face, image_yscale, 0, draw_color, 1);
+
+

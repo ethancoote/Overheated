@@ -10,12 +10,13 @@ jump_frames = 4;
 jump_hold_frames = 8;
 jump_power = 4;
 coyote_frames = 3;
-walls = oWall;
+walls = layer_tilemap_get_id("Terrain");
 wall_slide_spd = 0.5;
 heat_scale = 1;
-heat_frames = 30;
+heat_frames = 40;
 hp = 100;
-hurt_frames = 10;
+hurt_frames = 20;
+attack_frames = 24;
 
 // vars
 x_spd = 0;
@@ -39,6 +40,12 @@ heat = 0;
 heat_timer = 0;
 heat_extra = 0;
 hurt_timer = 0;
+draw_color = c_white;
+attack_timer = 0;
+hitbox = noone;
+hitpause = 0;
+safe_timer = 0;
+depth = -1;
 
 // spawn location
 spawn = [oSpawn.x, oSpawn.y];
