@@ -126,7 +126,7 @@ if y_spd > term_vel {
 }
 
 // attack
-if attack_key && attack_timer == 0 && hurt_timer == 0{
+if attack_key && attack_timer == 0 && hurt_timer == 0 && spawn_timer == 0{
 	attack_timer = attack_frames;
 	image_index = 0;
 }
@@ -178,10 +178,23 @@ if heat == 6 {
 	hp -= 0.20;
 }
 
+if spawn_timer > 0 {
+	if spawn_timer == spawn_frames {
+		image_index = 0;
+	}
+	x_spd = 0;
+	y_spd = 0;
+	spawn_timer--;
+	
+}
+
 // win
 if place_meeting(x, y, oWin) {
 	oControl.win = true;
-	room_goto(0);
+	x_spd = 0;
+	y_spd = 0;
+	oWin.win = true;
+	//room_goto(0);
 }
 
 if hitpause > 0 {

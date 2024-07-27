@@ -17,6 +17,7 @@ heat_frames = 40;
 hp = 100;
 hurt_frames = 20;
 attack_frames = 24;
+spawn_frames = 54;
 
 // vars
 x_spd = 0;
@@ -45,6 +46,7 @@ attack_timer = 0;
 hitbox = noone;
 hitpause = 0;
 safe_timer = 0;
+spawn_timer = spawn_frames;
 depth = -1;
 
 // spawn location

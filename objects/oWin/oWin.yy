@@ -1,7 +1,10 @@
 {
   "$GMObject":"",
   "%Name":"oWin",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"oWin",
   "overriddenProperties":[],
@@ -28,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sWin",
-    "path":"sprites/sWin/sWin.yy",
+    "name":"sWin2",
+    "path":"sprites/sWin2/sWin2.yy",
   },
   "spriteMaskId":null,
   "visible":true,

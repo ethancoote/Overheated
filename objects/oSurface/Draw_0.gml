@@ -24,7 +24,7 @@ if surface_exists(surface) {
 		draw_sprite_ext(sLightSource, image_index, x - _cx + 3, y - _cy - 8, 0.7 + random(0.1), 0.7 + random(0.1), 0, c_white, 1);
 		gpu_set_blendmode(bm_normal);
 		gpu_set_blendmode(bm_add);
-		draw_sprite_ext(sLightSource, image_index, x - _cx + 3, y - _cy - 8, 0.7 + random(0.1), 0.7 + random(0.1), 0, c_yellow, 0.5);
+		draw_sprite_ext(sLightSource, image_index, x - _cx + 3, y - _cy - 8, 0.7 + random(0.1), 0.7 + random(0.1), 0, c_purple, 0.5);
 		
 	}
 	
