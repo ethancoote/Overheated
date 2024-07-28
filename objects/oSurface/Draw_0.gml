@@ -34,6 +34,11 @@ if surface_exists(surface) {
 		draw_sprite_ext(sLightSource, image_index, x - _cx + 5, y - _cy - 12, 0.7 + random(0.1), 0.7 + random(0.1), 0, c_white, 1);
 	}
 	
+	with (oLose) {
+		gpu_set_blendmode(bm_subtract);
+		draw_sprite_ext(sLightSource, image_index, x - _cx + 5, y - _cy - 12, 0.7 + random(0.1), 0.7 + random(0.1), 0, c_white, 1);
+	} 
+	
 	with (oWin) {
 		gpu_set_blendmode(bm_subtract);
 		draw_sprite_ext(sLightSource, image_index, x - _cx + 3, y - _cy - 8, 0.7 + random(0.1), 0.7 + random(0.1), 0, c_white, 1);
@@ -44,30 +49,29 @@ if surface_exists(surface) {
 	
 	
 	with (oLose) {
-		gpu_set_blendmode(bm_subtract);
-		draw_sprite_ext(sLightSource, image_index, x - _cx + 5, y - _cy - 12, 0.7 + random(0.1), 0.7 + random(0.1), 0, c_white, 1);
+		
 		gpu_set_blendmode(bm_normal);
 		gpu_set_blendmode(bm_add);
-		draw_sprite_ext(sLightSource, image_index, x - _cx + 5, y - _cy - 12, 0.7 + random(0.1), 0.7 + random(0.1), 0, c_orange, 0.5);
+		draw_sprite_ext(sLightSource, image_index, x - _cx + 5, y - _cy - 12, 0.7 + random(0.1), 0.7 + random(0.1), 0, c_orange, 0.3);
 	}
 	
 	with (oEnemyLava) {
 		
 		gpu_set_blendmode(bm_normal);
 		gpu_set_blendmode(bm_add);
-		draw_sprite_ext(sLightSource, image_index, x - _cx + 5, y - _cy - 12, 0.7 + random(0.1), 0.7 + random(0.1), 0, c_orange, 0.5);
+		draw_sprite_ext(sLightSource, image_index, x - _cx + 5, y - _cy - 12, 0.7 + random(0.1), 0.7 + random(0.1), 0, c_orange, 0.4);
 	}
 	
 	with (oEnemyLavaStill) {
 		gpu_set_blendmode(bm_normal);
 		gpu_set_blendmode(bm_add);
-		draw_sprite_ext(sLightSource, image_index, x - _cx + 5, y - _cy - 12, 0.7 + random(0.1), 0.7 + random(0.1), 0, c_orange, 0.5);
+		draw_sprite_ext(sLightSource, image_index, x - _cx + 5, y - _cy - 12, 0.7 + random(0.1), 0.7 + random(0.1), 0, c_orange, 0.4);
 	}
 	
 	with (oEnemyLavaVert) {
 		gpu_set_blendmode(bm_normal);
 		gpu_set_blendmode(bm_add);
-		draw_sprite_ext(sLightSource, image_index, x - _cx + 5, y - _cy - 12, 0.7 + random(0.1), 0.7 + random(0.1), 0, c_orange, 0.5);
+		draw_sprite_ext(sLightSource, image_index, x - _cx + 5, y - _cy - 12, 0.7 + random(0.1), 0.7 + random(0.1), 0, c_orange, 0.4);
 	}
 	
 	with (oPlayer) {

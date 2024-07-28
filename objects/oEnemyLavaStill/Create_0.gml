@@ -5,4 +5,4 @@ y_start = y;
 out = true;
 explode_frames = 20;
 explode_timer = 0;
-hitpause_frames = 7;
+hitpause_frames = 8;

@@ -25,10 +25,9 @@ if x_spd == spd || x_spd == -spd {
 	}
 }
 
-if heat == 5 {
+
+if heat == 6 {
 	heat_extra = 0.5;
-} else if heat == 6 {
-	heat_extra = 1;
 } else {
 	heat_extra = 0;
 }
@@ -144,9 +143,9 @@ if attack_timer > 0 {
 	attack_timer--;
 	if attack_timer == 16 {
 		if face == 1 {
-			hitbox = instance_create_depth(x + 10 + x_spd, y, 0, oHitbox);
+			hitbox = instance_create_depth(x + 10 + (x_spd*3), y + (y_spd*3), 0, oHitbox);
 		} else if face == -1 {
-			hitbox = instance_create_depth(x -30 + x_spd, y, 0, oHitbox);
+			hitbox = instance_create_depth(x -30 + (x_spd*3), y + (y_spd*3), 0, oHitbox);
 		}
 	}
 	if attack_timer == 8 {
@@ -192,8 +191,8 @@ if hurt_timer > 0 {
 	draw_color = c_red;
 	hurt_timer--;
 	if hp > 0 {
-		x_spd = -3;
-		y_spd = -1;
+		x_spd = -1;
+		y_spd = -2;
 	} else {
 		x_spd = 0;
 		y_spd = 0;
