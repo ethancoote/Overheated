@@ -119,9 +119,9 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"MenuRoom","path":"rooms/MenuRoom/MenuRoom.yy",},},
+    {"roomId":{"name":"AttackCancelRoom","path":"rooms/AttackCancelRoom/AttackCancelRoom.yy",},},
     {"roomId":{"name":"JumpRoom","path":"rooms/JumpRoom/JumpRoom.yy",},},
     {"roomId":{"name":"WallJumpRoom","path":"rooms/WallJumpRoom/WallJumpRoom.yy",},},
-    {"roomId":{"name":"AttackCancelRoom","path":"rooms/AttackCancelRoom/AttackCancelRoom.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
