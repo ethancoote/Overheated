@@ -14,7 +14,10 @@ if x_spd == spd || x_spd == -spd {
 	}
 } else if heat_timer > 0 {
 	heat_timer--;
-	if heat_timer == 0 {
+	if x_spd == 0 && !on_wall_right && !on_wall_left{
+		heat_timer--;
+	}
+	if heat_timer <= 0 {
 		heat_timer = heat_frames-1;
 		if heat > 0 {
 			heat--;
@@ -60,7 +63,6 @@ if grounded {
 	coyote_timer = coyote_frames;
 } else {
 	ideal_spd = move_dir * air_spd;
-	show_debug_message(string(jump_count));
 
 	if jump_count == jumps && coyote_timer > 0 {
 		coyote_timer--;
@@ -73,9 +75,6 @@ if grounded {
 		coyote_timer = coyote_frames + 3;
 	}
 	
-	/*if coyote_timer > 0 {
-		jump_count = jumps;
-	}*/
 }
 
 // accel and momentum
@@ -189,7 +188,7 @@ if ((instance_place(x, y, oEnemyLavaVert)) != noone) && hurt_timer == 0 && (atta
 
 if hurt_timer > 0 {
 	heat = 0;
-	heat_timer = heat_frames;
+	heat_timer = 0;
 	draw_color = c_red;
 	hurt_timer--;
 	if hp > 0 {
@@ -205,7 +204,7 @@ if hurt_timer > 0 {
 
 // heat damage
 if heat == 6 {
-	hp -= 0.20;
+	hp -= heat_damage;
 }
 
 if spawn_timer > 0 {

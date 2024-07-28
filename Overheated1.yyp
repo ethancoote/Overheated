@@ -44,6 +44,7 @@
     {"id":{"name":"fnText","path":"fonts/fnText/fnText.yy",},},
     {"id":{"name":"fnTextSmall","path":"fonts/fnTextSmall/fnTextSmall.yy",},},
     {"id":{"name":"fnTimer","path":"fonts/fnTimer/fnTimer.yy",},},
+    {"id":{"name":"HeatRoomText1","path":"objects/HeatRoomText1/HeatRoomText1.yy",},},
     {"id":{"name":"JumpRoomText1","path":"objects/JumpRoomText1/JumpRoomText1.yy",},},
     {"id":{"name":"JumpRoomText2","path":"objects/JumpRoomText2/JumpRoomText2.yy",},},
     {"id":{"name":"oBackgroundRocks","path":"objects/oBackgroundRocks/oBackgroundRocks.yy",},},
@@ -72,6 +73,7 @@
     {"id":{"name":"WallJumpRoomText3","path":"objects/WallJumpRoomText3/WallJumpRoomText3.yy",},},
     {"id":{"name":"psHeatMeter","path":"particles/psHeatMeter/psHeatMeter.yy",},},
     {"id":{"name":"AttackCancelRoom","path":"rooms/AttackCancelRoom/AttackCancelRoom.yy",},},
+    {"id":{"name":"HeatRoom","path":"rooms/HeatRoom/HeatRoom.yy",},},
     {"id":{"name":"JumpRoom","path":"rooms/JumpRoom/JumpRoom.yy",},},
     {"id":{"name":"MenuRoom","path":"rooms/MenuRoom/MenuRoom.yy",},},
     {"id":{"name":"WallJumpRoom","path":"rooms/WallJumpRoom/WallJumpRoom.yy",},},
@@ -119,9 +121,10 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"MenuRoom","path":"rooms/MenuRoom/MenuRoom.yy",},},
-    {"roomId":{"name":"AttackCancelRoom","path":"rooms/AttackCancelRoom/AttackCancelRoom.yy",},},
     {"roomId":{"name":"JumpRoom","path":"rooms/JumpRoom/JumpRoom.yy",},},
     {"roomId":{"name":"WallJumpRoom","path":"rooms/WallJumpRoom/WallJumpRoom.yy",},},
+    {"roomId":{"name":"HeatRoom","path":"rooms/HeatRoom/HeatRoom.yy",},},
+    {"roomId":{"name":"AttackCancelRoom","path":"rooms/AttackCancelRoom/AttackCancelRoom.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
