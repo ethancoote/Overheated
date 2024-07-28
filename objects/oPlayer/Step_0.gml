@@ -152,9 +152,9 @@ if place_meeting(x, y, oLose) && hurt_timer == 0 {
 	hp -= 50;
 }
 
-if place_meeting(x, y, oEnemyLava) && hurt_timer == 0 && attack_timer == 0 && safe_timer == 0{
+if (place_meeting(x, y, oEnemyLava) || place_meeting(x, y, oEnemyLavaStill) || place_meeting(x, y, oEnemyLavaVert)) && hurt_timer == 0 && attack_timer == 0 && safe_timer == 0{
 	hurt_timer = hurt_frames;
-	hp -= 30;
+	hp -= 35;
 }
 
 if hurt_timer > 0 {
