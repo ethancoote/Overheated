@@ -52,6 +52,7 @@
     {"id":{"name":"oControl","path":"objects/oControl/oControl.yy",},},
     {"id":{"name":"oEnemyLava","path":"objects/oEnemyLava/oEnemyLava.yy",},},
     {"id":{"name":"oEnemyLavaStill","path":"objects/oEnemyLavaStill/oEnemyLavaStill.yy",},},
+    {"id":{"name":"oEnemyLavaStillRespawn","path":"objects/oEnemyLavaStillRespawn/oEnemyLavaStillRespawn.yy",},},
     {"id":{"name":"oEnemyLavaVert","path":"objects/oEnemyLavaVert/oEnemyLavaVert.yy",},},
     {"id":{"name":"oHealthBar","path":"objects/oHealthBar/oHealthBar.yy",},},
     {"id":{"name":"oHeat","path":"objects/oHeat/oHeat.yy",},},
@@ -83,6 +84,7 @@
     {"id":{"name":"sBackground1","path":"sprites/sBackground1/sBackground1.yy",},},
     {"id":{"name":"sBackground2","path":"sprites/sBackground2/sBackground2.yy",},},
     {"id":{"name":"sBackground3","path":"sprites/sBackground3/sBackground3.yy",},},
+    {"id":{"name":"sBlank","path":"sprites/sBlank/sBlank.yy",},},
     {"id":{"name":"sEnemyLava","path":"sprites/sEnemyLava/sEnemyLava.yy",},},
     {"id":{"name":"sEnemyLavaDeath","path":"sprites/sEnemyLavaDeath/sEnemyLavaDeath.yy",},},
     {"id":{"name":"sHeat0","path":"sprites/sHeat0/sHeat0.yy",},},
@@ -122,11 +124,11 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"MenuRoom","path":"rooms/MenuRoom/MenuRoom.yy",},},
-    {"roomId":{"name":"AllRoom1","path":"rooms/AllRoom1/AllRoom1.yy",},},
     {"roomId":{"name":"JumpRoom","path":"rooms/JumpRoom/JumpRoom.yy",},},
     {"roomId":{"name":"WallJumpRoom","path":"rooms/WallJumpRoom/WallJumpRoom.yy",},},
     {"roomId":{"name":"AttackCancelRoom","path":"rooms/AttackCancelRoom/AttackCancelRoom.yy",},},
     {"roomId":{"name":"HeatRoom","path":"rooms/HeatRoom/HeatRoom.yy",},},
+    {"roomId":{"name":"AllRoom1","path":"rooms/AllRoom1/AllRoom1.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

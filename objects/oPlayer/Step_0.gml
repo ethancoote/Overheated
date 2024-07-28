@@ -148,10 +148,12 @@ if attack_timer > 0 {
 			hitbox = instance_create_depth(x -30 + (x_spd*3), y + (y_spd*3), 0, oHitbox);
 		}
 	}
-	if attack_timer == 8 {
-		instance_destroy(hitbox);
-		hitbox = noone;
-	}
+	
+}
+
+if attack_timer < 8 && hitbox != noone {
+	instance_destroy(hitbox);
+	hitbox = noone;
 }
 
 // got hit

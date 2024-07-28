@@ -28,10 +28,10 @@
     {"name":"inst_459DE461","path":"rooms/WallJumpRoom/WallJumpRoom.yy",},
     {"name":"inst_58801D90","path":"rooms/WallJumpRoom/WallJumpRoom.yy",},
     {"name":"inst_7C011D68","path":"rooms/WallJumpRoom/WallJumpRoom.yy",},
-    {"name":"inst_39B32DE5","path":"rooms/WallJumpRoom/WallJumpRoom.yy",},
     {"name":"inst_6D7CBEE","path":"rooms/WallJumpRoom/WallJumpRoom.yy",},
     {"name":"inst_EC51FE7","path":"rooms/WallJumpRoom/WallJumpRoom.yy",},
     {"name":"inst_78E2FDCB","path":"rooms/WallJumpRoom/WallJumpRoom.yy",},
+    {"name":"inst_2D042E1E","path":"rooms/WallJumpRoom/WallJumpRoom.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -99,7 +99,7 @@
         {"$GMRInstance":"v1","%Name":"inst_459DE461","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_459DE461","objectId":{"name":"oEnemyLavaStill","path":"objects/oEnemyLavaStill/oEnemyLavaStill.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1104.0,"y":384.0,},
         {"$GMRInstance":"v1","%Name":"inst_58801D90","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_58801D90","objectId":{"name":"oEnemyLavaStill","path":"objects/oEnemyLavaStill/oEnemyLavaStill.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1168.0,"y":416.0,},
         {"$GMRInstance":"v1","%Name":"inst_7C011D68","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7C011D68","objectId":{"name":"oEnemyLavaStill","path":"objects/oEnemyLavaStill/oEnemyLavaStill.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1184.0,"y":384.0,},
-        {"$GMRInstance":"v1","%Name":"inst_39B32DE5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_39B32DE5","objectId":{"name":"oEnemyLavaStill","path":"objects/oEnemyLavaStill/oEnemyLavaStill.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1360.0,"y":384.0,},
+        {"$GMRInstance":"v1","%Name":"inst_2D042E1E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2D042E1E","objectId":{"name":"oEnemyLavaStillRespawn","path":"objects/oEnemyLavaStillRespawn/oEnemyLavaStillRespawn.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1360.0,"y":384.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"light","animationFPS":15.0,"animationSpeedType":0,"colour":436207615,"depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"light","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
     {"$GMRInstanceLayer":"","%Name":"rocks","depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
