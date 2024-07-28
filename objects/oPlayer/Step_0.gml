@@ -152,9 +152,29 @@ if place_meeting(x, y, oLose) && hurt_timer == 0 {
 	hp -= 50;
 }
 
-if (place_meeting(x, y, oEnemyLava) || place_meeting(x, y, oEnemyLavaStill) || place_meeting(x, y, oEnemyLavaVert)) && hurt_timer == 0 && attack_timer == 0 && safe_timer == 0{
-	hurt_timer = hurt_frames;
-	hp -= 35;
+if ((instance_place(x, y, oEnemyLava)) != noone) && hurt_timer == 0 && (attack_timer < 6 || attack_timer > 17) {
+	enemy_hurt = instance_place(x, y, oEnemyLava);
+	if enemy_hurt.explode_timer == 0 {
+		hurt_timer = hurt_frames;
+		hp -= 35;
+	}
+}
+
+if ((instance_place(x, y, oEnemyLavaStill)) != noone) && hurt_timer == 0 && (attack_timer < 6 || attack_timer > 17) {
+	enemy_hurt = instance_place(x, y, oEnemyLavaStill);
+	if enemy_hurt.explode_timer == 0 {
+		hurt_timer = hurt_frames;
+		hp -= 35;
+	}
+	
+}
+
+if ((instance_place(x, y, oEnemyLavaVert)) != noone) && hurt_timer == 0 && (attack_timer < 6 || attack_timer > 17) {
+	enemy_hurt = instance_place(x, y, oEnemyLavaVert);
+	if enemy_hurt.explode_timer == 0 {
+		hurt_timer = hurt_frames;
+		hp -= 35;
+	}
 }
 
 if hurt_timer > 0 {

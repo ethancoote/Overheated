@@ -42,7 +42,7 @@
     ],
     "top":0,
   },
-  "origin":0,
+  "origin":9,
   "parent":{
     "name":"Environment",
     "path":"folders/Sprites/Environment.yy",
@@ -95,7 +95,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":0,
-    "yorigin":0,
+    "yorigin":-4,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

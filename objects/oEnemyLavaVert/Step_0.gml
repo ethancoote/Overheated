@@ -18,7 +18,7 @@ if place_meeting(x, y, oHitbox) && explode_timer == 0 {
 	}
 	explode_timer = explode_frames + hitpause_frames;
 	oPlayer.hitpause = hitpause_frames;
-	oPlayer.safe_timer = explode_frames + hitpause_frames;
+	//oPlayer.safe_timer = explode_frames + hitpause_frames;
 	spd = 0;
 	oPlayer.hp += 10;
 	if oPlayer.hp > 100 {
