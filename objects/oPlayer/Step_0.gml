@@ -1,5 +1,5 @@
 // player controls
-var _i = get_gamepad();
+_i = get_gamepad();
 get_controls(_i);
 
 // setting heat
@@ -31,7 +31,7 @@ if heat == 5 {
 }
 
 // speed
-spd = 3 + (heat/3) + heat_extra;
+spd = 3 + (heat/4) + heat_extra;
 air_spd = spd;
 
 // saving poisition for point direction

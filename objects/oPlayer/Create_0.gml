@@ -18,6 +18,7 @@ hp = 100;
 hurt_frames = 20;
 attack_frames = 24;
 spawn_frames = 54;
+_i = 0;
 
 // vars
 x_spd = 0;
