@@ -86,12 +86,12 @@ if x_spd < ideal_spd {
 }
 
 // jump
-if jump_key && jump_count > 0 {
+if jump_key {
 	jump_buff_timer = jump_buffer;
 	jump_count -= 1;
 }
 
-if jump_buff_timer > 0 {
+if jump_buff_timer > 0 && jump_count > 0 {
 	jump_buff_timer = 0;
 	jump_timer = jump_frames;
 	jump_hold_timer = jump_hold_frames;
@@ -108,15 +108,18 @@ if jump_timer > 0 {
 	} else {
 		jump_hold_timer = 0;
 	}
-	
-	if on_wall_left == true && jump_key && !grounded{
-		x_scale = spd / 1.5;
-	} else if on_wall_right == true && jump_key && !grounded{
-		x_scale = -spd / 1.5;
+
+	if on_wall_left == true && !grounded && ground_jump == false  {
+		x_scale = spd / 1.2;
+	} else if on_wall_right == true && !grounded == false {
+		x_scale = -spd / 1.2;
+	} else {
+		ground_jump = true;
 	}
 	x_spd = x_scale;
 } else {
 	x_scale = x_spd;
+	ground_jump = false;
 }
 
 // gravity
@@ -269,6 +272,7 @@ if place_meeting(x + x_spd, y, walls) {
 	jump_count = jumps;
 	
 } else {
+	
 	on_wall_left = false;
 	on_wall_right = false;
 }

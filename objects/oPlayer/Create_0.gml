@@ -50,6 +50,7 @@ safe_timer = 0;
 spawn_timer = spawn_frames;
 depth = -1;
 enemy_hurt = noone;
+ground_jump = false;
 
 // spawn location
 spawn = [oSpawn.x, oSpawn.y];
