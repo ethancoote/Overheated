@@ -60,7 +60,9 @@ if grounded {
 	coyote_timer = coyote_frames;
 } else {
 	ideal_spd = move_dir * air_spd;
-	if jump_count == jumps && coyote_timer > 0{
+	show_debug_message(string(jump_count));
+
+	if jump_count == jumps && coyote_timer > 0 {
 		coyote_timer--;
 	} else if jump_count == jumps && coyote_timer == 0 {
 		jump_count = jumps - 1;
@@ -70,6 +72,10 @@ if grounded {
 		jump_count = jumps;
 		coyote_timer = coyote_frames + 3;
 	}
+	
+	/*if coyote_timer > 0 {
+		jump_count = jumps;
+	}*/
 }
 
 // accel and momentum
@@ -88,10 +94,11 @@ if x_spd < ideal_spd {
 // jump
 if jump_key {
 	jump_buff_timer = jump_buffer;
-	jump_count -= 1;
+	
 }
 
 if jump_buff_timer > 0 && jump_count > 0 {
+	jump_count -= 1;
 	jump_buff_timer = 0;
 	jump_timer = jump_frames;
 	jump_hold_timer = jump_hold_frames;
@@ -111,7 +118,7 @@ if jump_timer > 0 {
 
 	if on_wall_left == true && !grounded && ground_jump == false  {
 		x_scale = spd / 1.2;
-	} else if on_wall_right == true && !grounded == false {
+	} else if on_wall_right == true && !grounded && ground_jump == false {
 		x_scale = -spd / 1.2;
 	} else {
 		ground_jump = true;
