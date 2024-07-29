@@ -2,6 +2,11 @@
 _i = get_gamepad();
 get_controls(_i);
 
+// random pitch
+var _pitch = random_range(0.9, 1.1);
+var _pitch_low = random_range(0.7, 0.9);
+var _pitch_high = random_range(1.1, 1.3);
+
 // setting heat
 if x_spd == spd || x_spd == -spd {
 	if heat_timer < heat_frames {
@@ -136,6 +141,7 @@ if y_spd > term_vel {
 // attack
 if attack_key && attack_timer == 0 && hurt_timer == 0 && spawn_timer == 0{
 	attack_timer = attack_frames;
+	audio_play_sound(swoosh1, 1, false, 1, 0, _pitch);
 	image_index = 0;
 }
 
@@ -160,6 +166,8 @@ if attack_timer < 8 && hitbox != noone {
 if place_meeting(x, y, oLose) && hurt_timer == 0 {
 	hurt_timer = hurt_frames;
 	hp -= 50;
+	audio_play_sound(grunt1, 1, false, 1, 0, _pitch);
+	audio_play_sound(hit1, 1, false, 1, 0, _pitch_low);
 }
 
 if ((instance_place(x, y, oEnemyLava)) != noone) && hurt_timer == 0 && (attack_timer < 6 || attack_timer > 17) {
@@ -167,7 +175,10 @@ if ((instance_place(x, y, oEnemyLava)) != noone) && hurt_timer == 0 && (attack_t
 	if enemy_hurt.explode_timer == 0 {
 		hurt_timer = hurt_frames;
 		hp -= 35;
+		audio_play_sound(grunt1, 1, false, 1, 0, _pitch);
+		audio_play_sound(hit1, 1, false, 1, 0, _pitch_low);
 	}
+	
 }
 
 if ((instance_place(x, y, oEnemyLavaStill)) != noone) && hurt_timer == 0 && (attack_timer < 6 || attack_timer > 17) {
@@ -175,6 +186,8 @@ if ((instance_place(x, y, oEnemyLavaStill)) != noone) && hurt_timer == 0 && (att
 	if enemy_hurt.explode_timer == 0 {
 		hurt_timer = hurt_frames;
 		hp -= 35;
+		audio_play_sound(grunt1, 1, false, 1, 0, _pitch);
+		audio_play_sound(hit1, 1, false, 1, 0, _pitch_low);
 	}
 	
 }
@@ -184,6 +197,18 @@ if ((instance_place(x, y, oEnemyLavaVert)) != noone) && hurt_timer == 0 && (atta
 	if enemy_hurt.explode_timer == 0 {
 		hurt_timer = hurt_frames;
 		hp -= 35;
+		audio_play_sound(grunt1, 1, false, 1, 0, _pitch);
+		audio_play_sound(hit1, 1, false, 1, 0, _pitch_low);
+	}
+}
+
+if ((instance_place(x, y, oEnemyLavaStillRespawn)) != noone) && hurt_timer == 0 && (attack_timer < 6 || attack_timer > 17) {
+	enemy_hurt = instance_place(x, y, oEnemyLavaStillRespawn);
+	if enemy_hurt.explode_timer == 0 && enemy_hurt.respawn_timer == 0{
+		hurt_timer = hurt_frames;
+		hp -= 35;
+		audio_play_sound(grunt1, 1, false, 1, 0, _pitch);
+		audio_play_sound(hit1, 1, false, 1, 0, _pitch_low);
 	}
 }
 

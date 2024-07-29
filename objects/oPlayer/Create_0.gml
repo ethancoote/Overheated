@@ -57,3 +57,6 @@ ground_jump = false;
 spawn = [oSpawn.x, oSpawn.y];
 x = spawn[0];
 y = spawn[1];
+
+audio_play_sound(respawn1, 1, false, 0.7, 0, 0.8);
+
