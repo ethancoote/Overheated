@@ -67,6 +67,7 @@
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
     {"id":{"name":"oPlayerStill","path":"objects/oPlayerStill/oPlayerStill.yy",},},
     {"id":{"name":"oRedSurface","path":"objects/oRedSurface/oRedSurface.yy",},},
+    {"id":{"name":"oResolution","path":"objects/oResolution/oResolution.yy",},},
     {"id":{"name":"oSpawn","path":"objects/oSpawn/oSpawn.yy",},},
     {"id":{"name":"oSurface","path":"objects/oSurface/oSurface.yy",},},
     {"id":{"name":"oTitle","path":"objects/oTitle/oTitle.yy",},},
@@ -83,6 +84,7 @@
     {"id":{"name":"HeatRoom","path":"rooms/HeatRoom/HeatRoom.yy",},},
     {"id":{"name":"JumpRoom","path":"rooms/JumpRoom/JumpRoom.yy",},},
     {"id":{"name":"MenuRoom","path":"rooms/MenuRoom/MenuRoom.yy",},},
+    {"id":{"name":"ResolutionRoom","path":"rooms/ResolutionRoom/ResolutionRoom.yy",},},
     {"id":{"name":"WallJumpRoom","path":"rooms/WallJumpRoom/WallJumpRoom.yy",},},
     {"id":{"name":"controls","path":"scripts/controls/controls.yy",},},
     {"id":{"name":"death1","path":"sounds/death1/death1.yy",},},
@@ -142,6 +144,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"ResolutionRoom","path":"rooms/ResolutionRoom/ResolutionRoom.yy",},},
     {"roomId":{"name":"MenuRoom","path":"rooms/MenuRoom/MenuRoom.yy",},},
     {"roomId":{"name":"JumpRoom","path":"rooms/JumpRoom/JumpRoom.yy",},},
     {"roomId":{"name":"WallJumpRoom","path":"rooms/WallJumpRoom/WallJumpRoom.yy",},},

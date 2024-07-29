@@ -250,7 +250,6 @@ if heat == 6 {
 	}
 }
 
-
 last_frame_heat = heat;
 
 if fire_hurt_timer > 0 {
