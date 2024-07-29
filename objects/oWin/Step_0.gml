@@ -11,7 +11,8 @@ if win_timer > 0 {
 		if room != room_last {
 			room_goto_next();
 		} else {
-			room_goto(0);
+			oWinMenu.win = true;
+			//room_goto(0);
 		}
 		
 	}
