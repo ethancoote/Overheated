@@ -43,6 +43,7 @@
   },
   "name":"Overheated1",
   "resources":[
+    {"id":{"name":"extSaveData","path":"extensions/extSaveData/extSaveData.yy",},},
     {"id":{"name":"fnText","path":"fonts/fnText/fnText.yy",},},
     {"id":{"name":"fnTextSmall","path":"fonts/fnTextSmall/fnTextSmall.yy",},},
     {"id":{"name":"fnTimer","path":"fonts/fnTimer/fnTimer.yy",},},

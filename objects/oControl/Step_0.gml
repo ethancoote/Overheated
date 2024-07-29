@@ -16,11 +16,17 @@ if oWinMenu.win == true {
 	if last_time_mins < best_time_mins {
 		best_time_mins = last_time_mins;
 		best_time_sec = last_time_sec;
+		set_best = true;
 	} else if last_time_mins == best_time_mins {
 		if last_time_sec < best_time_sec {
 			best_time_mins = last_time_mins;
 			best_time_sec = last_time_sec;
+			set_best = true;
 		}
 	}
 }
 
+if set_best == true {
+	set_best_time(string(best_time_mins), string(best_time_sec));
+	set_best = false;
+}

@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.013333,
+  "duration":1.152744,
   "name":"respawn1",
   "parent":{
     "name":"Sounds",

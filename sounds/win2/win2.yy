@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":3.041224,
+  "duration":2.3622,
   "name":"win2",
   "parent":{
     "name":"Sounds",
