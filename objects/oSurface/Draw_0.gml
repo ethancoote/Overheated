@@ -94,8 +94,8 @@ if surface_exists(surface) {
 	}
 	
 	gpu_set_blendmode(bm_normal);
-	draw_set_alpha(1);
 	
+	draw_set_alpha(1);
 	surface_reset_target();
 	draw_surface(surface, _cx, _cy);
 	

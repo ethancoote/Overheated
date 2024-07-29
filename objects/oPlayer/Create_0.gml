@@ -52,6 +52,11 @@ spawn_timer = spawn_frames;
 depth = -1;
 enemy_hurt = noone;
 ground_jump = false;
+grass_timer = 0;
+grass_frames = 13;
+last_y_spd = 0;
+fire_hurt_timer = 0;
+last_frame_heat = 0;
 
 // spawn location
 spawn = [oSpawn.x, oSpawn.y];

@@ -23,6 +23,7 @@
     {"name":"inst_4A0CF976","path":"rooms/AttackCancelRoom/AttackCancelRoom.yy",},
     {"name":"inst_5640B527","path":"rooms/AttackCancelRoom/AttackCancelRoom.yy",},
     {"name":"inst_3B3A2A34","path":"rooms/AttackCancelRoom/AttackCancelRoom.yy",},
+    {"name":"inst_141ED7D5","path":"rooms/AttackCancelRoom/AttackCancelRoom.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -38,6 +39,7 @@
       ],"resourceType":"GMRAssetLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Instances_1","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_45D87B43","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_45D87B43","objectId":{"name":"oSurface","path":"objects/oSurface/oSurface.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
+        {"$GMRInstance":"v1","%Name":"inst_141ED7D5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_141ED7D5","objectId":{"name":"oRedSurface","path":"objects/oRedSurface/oRedSurface.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":544.0,"y":64.0,},
       ],"layers":[],"name":"Instances_1","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Terrain","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Terrain","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":34,"SerialiseWidth":82,"TileCompressedData":[
           1,4,-6,1,1,5,-74,-2147483648,3,8,7,7,-4,3,1,9,-74,-2147483648,-7,7,1,13,-45,-2147483648,-15,0,1,8,-6,

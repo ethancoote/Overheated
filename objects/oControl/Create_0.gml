@@ -11,4 +11,6 @@ last_time_sec = 5;
 best_time_mins = 999;
 best_time_sec = 2;
 
+audio_play_sound(menuSong2, 99, true);
+
 

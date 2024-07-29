@@ -48,8 +48,6 @@ if respawn_timer > 0 {
 	respawn_timer--;
 }
 
-show_debug_message("respawn " + string(respawn_timer));
-show_debug_message("explode " + string(explode_timer));
 if respawn_timer == 0 && explode_timer == 0 {
 	
 	sprite_index = sEnemyLava;

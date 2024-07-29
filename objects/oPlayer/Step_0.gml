@@ -5,6 +5,7 @@ get_controls(_i);
 // random pitch
 var _pitch = random_range(0.9, 1.1);
 var _pitch_low = random_range(0.7, 0.9);
+var _pitch_v_low = random_range(0.4, 0.6);
 var _pitch_high = random_range(1.1, 1.3);
 
 // setting heat
@@ -101,6 +102,7 @@ if jump_key {
 }
 
 if jump_buff_timer > 0 && jump_count > 0 {
+	audio_play_sound(footstep2, 1, false, 0.3, 0, _pitch_high);
 	jump_count -= 1;
 	jump_buff_timer = 0;
 	jump_timer = jump_frames;
@@ -137,6 +139,9 @@ y_spd += grav;
 if y_spd > term_vel {
 	y_spd = term_vel;
 }
+
+
+
 
 // attack
 if attack_key && attack_timer == 0 && hurt_timer == 0 && spawn_timer == 0{
@@ -231,6 +236,32 @@ if hurt_timer > 0 {
 // heat damage
 if heat == 6 {
 	hp -= heat_damage;
+	if last_frame_heat == 5 {
+		audio_play_sound(heat1, 1, false);
+	}
+	
+	if hp == 80 || hp == 60 || hp == 40 || hp == 20 || hp == 0 {
+		audio_play_sound(grunt1, 1, false, 1, 0, _pitch);
+		fire_hurt_timer = hurt_frames;
+	}
+	
+	if hp == 0 {
+		audio_play_sound(hit1, 1, false, 1, 0, _pitch_low);
+	}
+}
+
+
+last_frame_heat = heat;
+
+if fire_hurt_timer > 0 {
+	if fire_hurt_timer == hurt_frames {
+		draw_color = c_red;
+	} 
+	
+	fire_hurt_timer--;
+	if fire_hurt_timer == 0 {
+		draw_color = c_white;
+	}
 }
 
 if spawn_timer > 0 {
@@ -282,6 +313,10 @@ if place_meeting(x, y + y_spd, walls) {
 		y += _pixel_check;
 	}
 	y_spd = 0;
+	
+	if !grounded {
+		audio_play_sound(footstep2, 1, false, 0.3, 0, 1.4);	
+	}
 }
 
 y += y_spd;
@@ -316,5 +351,20 @@ if hp <= 0 && hurt_timer == 0{
 	oControl.lose = true;
 	room_restart();
 }
+
+// walking sound
+if grounded && x_spd != 0 {
+	if grass_timer == 0 {
+		grass_timer = grass_frames;
+		audio_stop_sound(footstep2);
+		audio_play_sound(footstep2, 1, false, 0.1, 0, _pitch_low);
+	} else {
+		grass_timer--;
+	}
+} else if !grounded {
+	grass_timer = grass_frames;
+}
+
+last_y_spd = y_spd;
 
 
