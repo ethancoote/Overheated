@@ -58,6 +58,9 @@ last_y_spd = 0;
 fire_hurt_timer = 0;
 last_frame_heat = 0;
 
+reset_frames = 60;
+reset_timer = reset_frames;
+
 // spawn location
 spawn = [oSpawn.x, oSpawn.y];
 x = spawn[0];

@@ -366,4 +366,15 @@ if grounded && x_spd != 0 {
 
 last_y_spd = y_spd;
 
+// reset
+if reset_key {
+	reset_timer--;
+} else {
+	reset_timer = reset_frames;
+}
 
+if reset_timer == 0 {
+	oControl.timer = 0;
+	oControl.mins = 0;
+	room_goto(MenuRoom);
+}

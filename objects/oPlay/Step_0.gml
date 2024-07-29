@@ -13,7 +13,7 @@ if _inst != noone {
 }
 
 i = get_gamepad();
-if gamepad_button_check_pressed(i, gp_face1) {
+if gamepad_button_check_pressed(i, gp_face1) || keyboard_check_pressed(vk_enter){
 	oControl.timer = 0;
 	oControl.mins = 0;
 	room_goto_next();

@@ -29,6 +29,8 @@ function get_controls(_i){
 	
 	enter_key = keyboard_check_pressed(vk_enter);
 	
+	reset_key = keyboard_check(vk_shift) || gamepad_button_check(_i, gp_shoulderl) || gamepad_button_check(_i, gp_shoulderr);
+	
 }
 
 // getting gamepad
