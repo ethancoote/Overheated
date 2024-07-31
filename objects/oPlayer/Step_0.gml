@@ -172,7 +172,7 @@ if place_meeting(x, y, oLose) && hurt_timer == 0 {
 	hurt_timer = hurt_frames;
 	hp -= 50;
 	audio_play_sound(grunt1, 1, false, 1, 0, _pitch);
-	audio_play_sound(hit1, 1, false, 1, 0, _pitch_low);
+	audio_play_sound(hit1, 1, false, 0.7, 0, _pitch_low);
 }
 
 if ((instance_place(x, y, oEnemyLava)) != noone) && hurt_timer == 0 && (attack_timer < 6 || attack_timer > 17) {
@@ -181,7 +181,7 @@ if ((instance_place(x, y, oEnemyLava)) != noone) && hurt_timer == 0 && (attack_t
 		hurt_timer = hurt_frames;
 		hp -= 35;
 		audio_play_sound(grunt1, 1, false, 1, 0, _pitch);
-		audio_play_sound(hit1, 1, false, 1, 0, _pitch_low);
+		audio_play_sound(hit1, 1, false, 0.7, 0, _pitch_low);
 	}
 	
 }
@@ -192,7 +192,7 @@ if ((instance_place(x, y, oEnemyLavaStill)) != noone) && hurt_timer == 0 && (att
 		hurt_timer = hurt_frames;
 		hp -= 35;
 		audio_play_sound(grunt1, 1, false, 1, 0, _pitch);
-		audio_play_sound(hit1, 1, false, 1, 0, _pitch_low);
+		audio_play_sound(hit1, 1, false, 0.7, 0, _pitch_low);
 	}
 	
 }
@@ -203,7 +203,7 @@ if ((instance_place(x, y, oEnemyLavaVert)) != noone) && hurt_timer == 0 && (atta
 		hurt_timer = hurt_frames;
 		hp -= 35;
 		audio_play_sound(grunt1, 1, false, 1, 0, _pitch);
-		audio_play_sound(hit1, 1, false, 1, 0, _pitch_low);
+		audio_play_sound(hit1, 1, false, 0.7, 0, _pitch_low);
 	}
 }
 
@@ -213,7 +213,7 @@ if ((instance_place(x, y, oEnemyLavaStillRespawn)) != noone) && hurt_timer == 0 
 		hurt_timer = hurt_frames;
 		hp -= 35;
 		audio_play_sound(grunt1, 1, false, 1, 0, _pitch);
-		audio_play_sound(hit1, 1, false, 1, 0, _pitch_low);
+		audio_play_sound(hit1, 1, false, 0.7, 0, _pitch_low);
 	}
 }
 
@@ -313,11 +313,15 @@ if place_meeting(x, y + y_spd, walls) {
 	}
 	y_spd = 0;
 	
-	if !grounded {
+	if !grounded && land_sound_timer == 0{
 		audio_play_sound(footstep2, 1, false, 0.3, 0, 1.4);	
+		land_sound_timer = land_sound_frames;
 	}
 }
 
+if land_sound_timer > 0 {
+	land_sound_timer--;
+}
 y += y_spd;
 
 // x collision

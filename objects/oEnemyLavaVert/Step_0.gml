@@ -22,7 +22,7 @@ if place_meeting(x, y, oHitbox) && explode_timer == 0 {
 	explode_timer = explode_frames + hitpause_frames;
 	oPlayer.hitpause = hitpause_frames;
 	//oPlayer.safe_timer = explode_frames + hitpause_frames;
-	audio_play_sound(hit1, 1, false, 1, 0, _pitch);
+	audio_play_sound(hit1, 1, false, 0.7, 0, _pitch);
 	spd = 0;
 	oPlayer.hp += 10;
 	if oPlayer.hp > 100 {

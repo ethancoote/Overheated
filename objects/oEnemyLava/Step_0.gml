@@ -19,7 +19,7 @@ if place_meeting(x, y, oHitbox) && explode_timer == 0 {
 	if oPlayer.heat < 6 {
 		oPlayer.heat++;
 	}
-	audio_play_sound(hit1, 1, false, 1, 0, _pitch);
+	audio_play_sound(hit1, 1, false, 0.7, 0, _pitch);
 	explode_timer = explode_frames + hitpause_frames;
 	oPlayer.hitpause = hitpause_frames;
 	//oPlayer.safe_timer = explode_frames + hitpause_frames;
