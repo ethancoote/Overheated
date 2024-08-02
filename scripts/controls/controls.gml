@@ -25,11 +25,12 @@ function get_controls(_i){
 	|| gamepad_button_check(_i, gp_face1);
 	
 	attack_key = keyboard_check_pressed(ord("P"))
-	|| gamepad_button_check_pressed(_i, gp_face3);
+	|| gamepad_button_check_pressed(_i, gp_face3)
+	|| keyboard_check_pressed(vk_control);
 	
 	enter_key = keyboard_check_pressed(vk_enter);
 	
-	reset_key = keyboard_check(vk_shift) || gamepad_button_check(_i, gp_shoulderl) || gamepad_button_check(_i, gp_shoulderr);
+	reset_key = keyboard_check(ord("R")) || (gamepad_button_check(_i, gp_shoulderl) && gamepad_button_check(_i, gp_shoulderr));
 	
 }
 
@@ -42,7 +43,6 @@ function get_gamepad() {
 			break;
 		}
 	}
-	
 	gamepad_set_axis_deadzone(gamepad, 0.3);
 	
 	return gamepad;

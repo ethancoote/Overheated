@@ -4,6 +4,7 @@ air_spd = 3;
 grav = 0.5;
 term_vel = 6;
 accel = 0.5;
+accel_start = 0.5;
 jump_buffer = 7;
 jumps = 1;
 jump_frames = 4;
@@ -59,6 +60,8 @@ last_y_spd = 0;
 fire_hurt_timer = 0;
 last_frame_heat = 0;
 land_sound_timer = 0;
+wall_jump_timer_l = 0;
+wall_jump_timer_r = 0;
 
 reset_frames = 60;
 reset_timer = reset_frames;

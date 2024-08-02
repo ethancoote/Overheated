@@ -39,7 +39,7 @@ if heat == 6 {
 }
 
 // speed
-spd = 3 + (heat/4) + heat_extra;
+spd = (3 + (heat/4) + heat_extra);
 air_spd = spd;
 
 // saving poisition for point direction
@@ -77,11 +77,25 @@ if grounded {
 	
 	if on_wall_left || on_wall_right {
 		jump_count = jumps;
-		coyote_timer = coyote_frames + 3;
+		
+		coyote_timer = coyote_frames;
+	} 
+	
+	if on_wall_left {
+		wall_jump_timer_l = coyote_frames;
+	} else if wall_jump_timer_l > 0 {
+		wall_jump_timer_l--;
+	}
+	
+	if on_wall_right {
+		wall_jump_timer_r = coyote_frames;
+	} else if wall_jump_timer_r > 0 {
+		wall_jump_timer_r--;
 	}
 	
 }
 
+accel = accel_start;
 // accel and momentum
 if x_spd < ideal_spd {
 	x_spd += accel;
@@ -121,9 +135,9 @@ if jump_timer > 0 {
 		jump_hold_timer = 0;
 	}
 
-	if on_wall_left == true && !grounded && ground_jump == false  {
+	if wall_jump_timer_l > 0 && !grounded && ground_jump == false  {
 		x_scale = spd / 1.2;
-	} else if on_wall_right == true && !grounded && ground_jump == false {
+	} else if wall_jump_timer_r > 0 && !grounded && ground_jump == false {
 		x_scale = -spd / 1.2;
 	} else {
 		ground_jump = true;
@@ -139,9 +153,6 @@ y_spd += grav;
 if y_spd > term_vel {
 	y_spd = term_vel;
 }
-
-
-
 
 // attack
 if attack_key && attack_timer == 0 && hurt_timer == 0 && spawn_timer == 0{
@@ -175,7 +186,7 @@ if place_meeting(x, y, oLose) && hurt_timer == 0 {
 	audio_play_sound(hit1, 1, false, 0.7, 0, _pitch_low);
 }
 
-if ((instance_place(x, y, oEnemyLava)) != noone) && hurt_timer == 0 && (attack_timer < 6 || attack_timer > 17) {
+if ((instance_place(x, y, oEnemyLava)) != noone) && hurt_timer == 0 && (attack_timer < 6 || attack_timer > 22) {
 	enemy_hurt = instance_place(x, y, oEnemyLava);
 	if enemy_hurt.explode_timer == 0 {
 		hurt_timer = hurt_frames;
@@ -186,7 +197,7 @@ if ((instance_place(x, y, oEnemyLava)) != noone) && hurt_timer == 0 && (attack_t
 	
 }
 
-if ((instance_place(x, y, oEnemyLavaStill)) != noone) && hurt_timer == 0 && (attack_timer < 6 || attack_timer > 17) {
+if ((instance_place(x, y, oEnemyLavaStill)) != noone) && hurt_timer == 0 && (attack_timer < 6 || attack_timer > 22) {
 	enemy_hurt = instance_place(x, y, oEnemyLavaStill);
 	if enemy_hurt.explode_timer == 0 {
 		hurt_timer = hurt_frames;
@@ -197,7 +208,7 @@ if ((instance_place(x, y, oEnemyLavaStill)) != noone) && hurt_timer == 0 && (att
 	
 }
 
-if ((instance_place(x, y, oEnemyLavaVert)) != noone) && hurt_timer == 0 && (attack_timer < 6 || attack_timer > 17) {
+if ((instance_place(x, y, oEnemyLavaVert)) != noone) && hurt_timer == 0 && (attack_timer < 6 || attack_timer > 22) {
 	enemy_hurt = instance_place(x, y, oEnemyLavaVert);
 	if enemy_hurt.explode_timer == 0 {
 		hurt_timer = hurt_frames;
@@ -207,7 +218,7 @@ if ((instance_place(x, y, oEnemyLavaVert)) != noone) && hurt_timer == 0 && (atta
 	}
 }
 
-if ((instance_place(x, y, oEnemyLavaStillRespawn)) != noone) && hurt_timer == 0 && (attack_timer < 6 || attack_timer > 17) {
+if ((instance_place(x, y, oEnemyLavaStillRespawn)) != noone) && hurt_timer == 0 && (attack_timer < 6 || attack_timer > 22) {
 	enemy_hurt = instance_place(x, y, oEnemyLavaStillRespawn);
 	if enemy_hurt.explode_timer == 0 && enemy_hurt.respawn_timer == 0{
 		hurt_timer = hurt_frames;
@@ -325,7 +336,7 @@ if land_sound_timer > 0 {
 y += y_spd;
 
 // x collision
-if place_meeting(x + x_spd, y, walls) {
+if place_meeting(x + (x_spd), y, walls) {
 	var _pixel_check = _sub_pixel * sign(x_spd);
 	while !place_meeting(x + _pixel_check, y, walls) {
 		x += _pixel_check;
@@ -370,14 +381,7 @@ if grounded && x_spd != 0 {
 
 last_y_spd = y_spd;
 
-// reset
 if reset_key {
-	reset_timer--;
-} else {
-	reset_timer = reset_frames;
-}
-
-if reset_timer == 0 {
 	oControl.timer = 0;
 	oControl.mins = 0;
 	room_goto(MenuRoom);
