@@ -11,6 +11,7 @@ delta_mult = actual_delta/target_delta;
 // timer
 timer = 0.0;
 mins = 0;
+timer_zero = "";
 last_time_mins = 0;
 last_time_sec = 0;
 best_time_sec = get_best_time_sec();
