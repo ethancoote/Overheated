@@ -1,4 +1,4 @@
-/*bw = browser_width;
+bw = browser_width;
 bh = browser_height;
 guiw = display_get_gui_width();
 guih = display_get_gui_height();
@@ -10,5 +10,5 @@ window_set_size(bw, bh);
 
 display_set_gui_size(guiw, guih);
 
-window_center();*/
+window_center();
 room_goto_next();
