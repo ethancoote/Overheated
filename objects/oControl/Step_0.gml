@@ -1,7 +1,6 @@
 // update delta_time
 actual_delta = delta_time/1000000;
 global.delta_mult = actual_delta/target_delta;
-show_debug_message(string(global.delta_mult) + string(timer));
 
 if room != MenuRoom && oWinMenu.win == false{
 	timer += (1/60) * global.delta_mult;
