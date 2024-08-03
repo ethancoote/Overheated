@@ -11,7 +11,7 @@ for(count=0;count<i;count++) {
 		_space = _space + " ";
 	}
 
-	draw_text_ext_color(x, y + 64 + (52*count), string(count+1) + ".  " + names[count] + _space + times[count], 20, 1000, c_white, c_white, c_gray, c_gray, 1);
+	draw_text_ext_color(x -52, y + 64 + (52*count), string(count+1) + ".  " + names[count] + _space + times[count], 20, 1000, c_white, c_white, c_gray, c_gray, 1);
 }
 
 
