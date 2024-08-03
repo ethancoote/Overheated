@@ -26,6 +26,8 @@ if best_time_mins == "" {
 	best_time_mins = 999;
 } else {
 	best_time_mins = real(best_time_mins);
+	best_time = (best_time_mins * 60) + best_time_sec;
+	LootLockerSubmitScoreMetadata("24006", string(best_time*100), string(best_time_mins) + ":" + string(best_time_sec) );
 }
 
 audio_play_sound(menuSong2, 99, true);
@@ -34,6 +36,8 @@ set_best = false;
 
 LootLockerInitialize("dev_06b3c273ed3b46f2bd803114f294414d", "0.0.0.1", true, 24006);
 global.LLdevelopmentMode = true;
+
+
 
 
 

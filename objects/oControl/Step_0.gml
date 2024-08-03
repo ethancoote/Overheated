@@ -32,6 +32,6 @@ if oWinMenu.win == true {
 
 if set_best == true {
 	set_best_time(string(best_time_mins), string(best_time_sec));
-	LootLockerSubmitScoreMetadata()
+	//LootLockerSubmitScoreMetadata()
 	set_best = false;
 }
