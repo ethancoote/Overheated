@@ -22,3 +22,16 @@ function get_best_time_sec() {
     }
     
 }
+
+function get_name() {
+    name_val = localStorage.getItem("name");
+    if (name_val == null) {
+        return "";
+    } else {
+        return name_val;
+    }
+}
+
+function set_name(player_name) {
+    localStorage.setItem("name", player_name);
+}

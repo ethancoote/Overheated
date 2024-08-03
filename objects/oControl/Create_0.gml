@@ -32,8 +32,8 @@ audio_play_sound(menuSong2, 99, true);
 
 set_best = false;
 
-//LootLockerInitialize("dev_06b3c273ed3b46f2bd803114f294414d", "0.0.0.1", false, 23877);
-
+LootLockerInitialize("dev_06b3c273ed3b46f2bd803114f294414d", "0.0.0.1", true, 24006);
+global.LLdevelopmentMode = true;
 
 
 
