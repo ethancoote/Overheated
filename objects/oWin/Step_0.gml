@@ -12,6 +12,7 @@ if win_timer > 0 {
 			room_goto_next();
 		} else {
 			oWinMenu.win = true;
+			room_goto(WinRoom);
 			//room_goto(0);
 		}
 		

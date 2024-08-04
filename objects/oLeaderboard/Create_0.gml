@@ -1,4 +1,4 @@
-i = 7;
+i = 8;
 count = 0;
 time_string = "";
 names = [];

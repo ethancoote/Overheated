@@ -1,4 +1,5 @@
 draw_set_font(fnTimer);
+draw_set_halign(fa_left);
 
 if oControl.best_time_sec < 10 {
 	timer_zero = "0";

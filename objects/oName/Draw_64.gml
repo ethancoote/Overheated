@@ -10,4 +10,5 @@ if keyboard_string != last_string {
 	audio_play_sound(click, 1, false, 0.8, 0, rand);
 }
 last_string = keyboard_string;
+draw_set_halign(fa_center);
 draw_text_color(x, y, keyboard_string, c_white, c_white, c_gray, c_gray, 1);

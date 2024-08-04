@@ -1,5 +1,6 @@
 draw_set_font(fnTimer);
-if room != MenuRoom && room!= NameRoom && room!=LeaderboardRoom{
+draw_set_halign(fa_left);
+if room != MenuRoom && room!= NameRoom && room!=LeaderboardRoom && room!= WinRoom{
 	if timer < 10 {
 		timer_zero = "0";
 	} else {
