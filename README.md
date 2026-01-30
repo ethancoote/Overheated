@@ -26,4 +26,4 @@ Play <i>Overheated</i> in your browser [here](https://bryanbill.itch.io/overheat
 ## Author
 
 <b>Ethan Coote - </b>
-[Itch.io](https://bryanbill.itch.io/) | [GameDev Portfolio](https://ethancoote.github.io/Games-Portfolio/) 
+[Itch.io](https://bryanbill.itch.io/)
